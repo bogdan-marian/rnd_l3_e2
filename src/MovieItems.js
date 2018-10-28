@@ -1,12 +1,18 @@
 import React, {Component} from "react";
-import App from "./App";
+import MovieItem from "./MovieItem";
 
 class MovieItems extends Component{
     render(){
         const{profiles, users, movies, usersByMovie} = this.props;
 
         const movieItems = Object.keys(movies).map(id => (
-            <li>"movie item text"</li>
+            <MovieItem
+                key={id}
+                users={users}
+                usersWhoLikedMovie={usersByMovie[id]}
+                movieInfo={movies[id]}
+            />
+
         ))
 
         /*
@@ -15,4 +21,4 @@ class MovieItems extends Component{
         return <ul>{movieItems}</ul>
     }
 }
-export default App;
+export default MovieItems;
