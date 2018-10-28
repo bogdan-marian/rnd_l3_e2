@@ -6,7 +6,7 @@ class MovieCard extends Component{
 
         return (
             <li key={movieInfo.id}>
-                <h2>{movieInfo.name}</h2>
+                <h2>card {movieInfo.name}</h2>
             </li>
         );
     }
